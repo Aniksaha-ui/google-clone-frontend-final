@@ -15,6 +15,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserComponent } from './user/user.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, UserComponent],
@@ -34,6 +35,10 @@ import { UserComponent } from './user/user.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    RouterModule.forRoot([
+      { path: '', component: AppComponent },
+      { path: 'user', component: UserComponent },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],
