@@ -16,9 +16,19 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserComponent } from './user/user.component';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
+import { IsAuthenticateGuard } from './is-authenticate.guard';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
-  declarations: [AppComponent, UserComponent],
+  declarations: [
+    AppComponent,
+    UserComponent,
+    NotFoundComponent,
+    LoginComponent,
+    SigninComponent,
+  ],
   imports: [
     BrowserModule,
     MatToolbarModule,
@@ -37,7 +47,14 @@ import { RouterModule } from '@angular/router';
     MatSortModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent },
-      { path: 'user', component: UserComponent },
+      {
+        path: 'user',
+        component: UserComponent,
+        canActivate: [IsAuthenticateGuard],
+      },
+      { path: 'register', component: LoginComponent },
+      { path: 'login', component: SigninComponent },
+      { path: '**', component: NotFoundComponent },
     ]),
   ],
   providers: [],
