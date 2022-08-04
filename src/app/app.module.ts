@@ -20,7 +20,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { IsAuthenticateGuard } from './is-authenticate.guard';
 import { SigninComponent } from './signin/signin.component';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ContactInfoComponent } from './contact-info/contact-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,9 @@ import { SigninComponent } from './signin/signin.component';
     NotFoundComponent,
     LoginComponent,
     SigninComponent,
+    ContactsComponent,
+    ContactInfoComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -45,6 +50,7 @@ import { SigninComponent } from './signin/signin.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatDatepickerModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent },
       {
@@ -52,6 +58,7 @@ import { SigninComponent } from './signin/signin.component';
         component: UserComponent,
         canActivate: [IsAuthenticateGuard],
       },
+      {path:'contact',component:ContactsComponent},
       { path: 'register', component: LoginComponent },
       { path: 'login', component: SigninComponent },
       { path: '**', component: NotFoundComponent },

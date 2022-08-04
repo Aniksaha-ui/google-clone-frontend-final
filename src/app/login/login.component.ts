@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.loginApiService.register(this.loginForm.value).subscribe({
         next: (res) => {
-          // console.log(res, 'response');
+          console.log(res,"response")
           localStorage.setItem('accessToken', res.token);
           this.router.navigate(['/']);
         },

@@ -38,9 +38,18 @@ export class SigninComponent implements OnInit {
       // console.log(this.signInForm.value);
       this.loginApiService.login(this.signInForm.value).subscribe({
         next: (res) => {
-          console.log(res, 'response');
-          localStorage.setItem('accessToken', res.token);
-          this.router.navigate(['/']);
+          if(res.status===404){
+            alert("Username and Password not found")
+            this.router.navigate(['/login']);
+          }
+          else if(res.status===200){
+            console.log(res, 'response');
+            localStorage.setItem('accessToken', res.token);
+            this.router.navigate(['/']);
+          }
+          else{
+
+          }
         },
       });
     }
