@@ -20,6 +20,7 @@ export class UserComponent implements OnInit {
   users: any = [];
   ngOnInit(): void {
     this.getUsers();
+
   }
 
   getUsers() {

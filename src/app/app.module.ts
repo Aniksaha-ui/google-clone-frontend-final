@@ -56,7 +56,7 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
       {
         path: 'user',
         component: UserComponent,
-        canActivate: [IsAuthenticateGuard],
+
       },
       {path:'contact',component:ContactsComponent},
       { path: 'register', component: LoginComponent },
