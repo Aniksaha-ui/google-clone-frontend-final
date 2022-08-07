@@ -8,6 +8,6 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getUserData() {
-    return this.http.get<any>('http://localhost:4000/user');
+    return this.http.get<any>('http://localhost:4000/user')
   }
 }
