@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private Router:Router) { }
 
   ngOnInit(): void {
   }
+
+  handleLogout(){
+     localStorage.removeItem("accessToken");
+    this.Router.navigate(['/login'])
+  }
+
 
 }

@@ -42,6 +42,8 @@ export class ContactsComponent implements OnInit {
       .subscribe({
         next:res=>{
           console.log(res);
+          alert("Contact Saved");
+          this.router.navigate(['/contactInfo']);
         }
       })
     }

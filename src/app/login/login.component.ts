@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     let token = localStorage.getItem('accessToken');
     if (token) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/contact']);
       //then goto dashboard
       return;
     } else {

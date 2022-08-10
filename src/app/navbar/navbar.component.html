@@ -1,6 +1,6 @@
 <mat-toolbar color="light">
   <mat-toolbar-row>
-    <span>Second Line</span>
+    <span>Contact Application</span>
     <span class="example-spacer"></span>
     <button mat-button routerLink="/">Home</button>
     <button mat-button routerLink="/contact">contact</button>
@@ -9,8 +9,9 @@
       mat-icon-button
       class="example-icon"
       aria-label="Example icon-button with share icon"
+      (click)="handleLogout()"
     >
-      <mat-icon>share</mat-icon>
+      <mat-icon>logout</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
