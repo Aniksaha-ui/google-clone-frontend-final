@@ -25,3 +25,9 @@
 .text-primary {
   color: rgb(24, 67, 67);
 }
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-form-field {
+  width: 200px;
+}

@@ -23,6 +23,7 @@ import { SigninComponent } from './signin/signin.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
     SigninComponent,
     ContactsComponent,
     ContactInfoComponent,
+    NavbarComponent,
 
   ],
   imports: [
@@ -58,7 +60,8 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
         component: UserComponent,
 
       },
-      {path:'contact',component:ContactsComponent},
+      {path:'contact',component:ContactsComponent,canActivate:[IsAuthenticateGuard]},
+      {path:'contactInfo',component:ContactInfoComponent,canActivate:[IsAuthenticateGuard]},
       { path: 'register', component: LoginComponent },
       { path: 'login', component: SigninComponent },
       { path: '**', component: NotFoundComponent },

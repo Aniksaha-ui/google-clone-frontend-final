@@ -37,6 +37,7 @@ export class ContactsComponent implements OnInit {
       let decodedJwtJsonData = window.atob(jwtData);
       let decodedJwtData = JSON.parse(decodedJwtJsonData);
       let email = decodedJwtData.email;
+      this.contactForm.value.useremail = email;
       this.ContactService.postContact(this.contactForm.value,email,token)
       .subscribe({
         next:res=>{
@@ -45,4 +46,6 @@ export class ContactsComponent implements OnInit {
       })
     }
   }
+
+
 }
