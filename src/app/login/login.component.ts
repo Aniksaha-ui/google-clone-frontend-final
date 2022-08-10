@@ -27,9 +27,10 @@ export class LoginComponent implements OnInit {
     }
 
     this.loginForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
+      firstName: ['', Validators.required && Validators.minLength(3)],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', Validators.required && Validators.email ],
+      phone: ['', Validators.required && Validators.minLength(10) ],
 
     });
   }
@@ -44,6 +45,26 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/contact']);
         },
       });
+    } else {
+
+      if(this.loginForm.controls.firstName.status === "INVALID"){
+        alert("First Name length must be atleast 3 charcter and required ")
+        return;
+      }
+      if(this.loginForm.controls.lastName.status === "INVALID"){
+        alert("Last Name length must be atleast 3 charcter and required ")
+        return;
+      }
+      if(this.loginForm.controls.email.status === "INVALID"){
+        alert("Email Pattern is not match")
+        return;
+      }
+      if(this.loginForm.controls.phone.status === "INVALID"){
+        alert("Phone Number length must be atleast 10 charcter and required ")
+        return;
+      }
     }
   }
 }
+
+

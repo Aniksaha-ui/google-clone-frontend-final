@@ -5,7 +5,7 @@
 
 This application is clone of google contact.
  
- - Register System -A user can register in his account.Admin give a authentication otp in his email.Then user can set his password.
+ - A user can register in his account.Admin give a permission and send otp and a link to set his password in his email.Then user can set his password.
 
  - A user can login using his set email and password.
  - After login, A user can add his contact and also see the contacts.

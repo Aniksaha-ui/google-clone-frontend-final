@@ -1,6 +1,8 @@
 <form [formGroup]="loginForm">
   <div class="card">
     <p class="text-center text-primary">Register</p>
+        <!-- First Name -->
+
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter First Name</mat-label>
@@ -11,6 +13,9 @@
         />
       </mat-form-field>
     </div>
+        <!-- First Name end -->
+
+        <!-- last name  -->
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Last Name</mat-label>
@@ -21,6 +26,9 @@
         />
       </mat-form-field>
     </div>
+        <!-- last name  -->
+
+      <!-- email  -->
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Email</mat-label>
@@ -31,6 +39,20 @@
         />
       </mat-form-field>
     </div>
+      <!-- email  -->
+
+      <!-- phone  -->
+      <div class="d-flex align-items-center justify-content-center">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Enter Phone Number</mat-label>
+          <input
+            formControlName="phone"
+            matInput
+            placeholder="Enter Your Phone Number"
+          />
+        </mat-form-field>
+      </div>
+      <!-- phone  -->
 
 
     <div mat-dialog-action [align]="'center'">
