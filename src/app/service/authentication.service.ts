@@ -12,8 +12,11 @@ export class AuthenticationService {
   }
 
   makeAuthorized(data) {
-    
-    // console.log(data,"email")
     return this.http.get<any>(`http://localhost:4000/user/authentication/${data}`)
   }
+
+  otpVerified(data){
+    return this.http.post<any>(`http://localhost:4000/user/verifyotp`,data);
+  }
+
 }

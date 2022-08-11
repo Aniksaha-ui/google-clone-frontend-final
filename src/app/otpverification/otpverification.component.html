@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<form [formGroup]="otpForm">
+  <div class="card">
+    <p class="text-center text-primary">OTP Varification</p>
+    <div class="d-flex align-items-center justify-content-center">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter Email Address</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="Enter Your Email"
+        />
+      </mat-form-field>
+    </div>
+
+
+    <!-- otp  -->
+    <div class="d-flex align-items-center justify-content-center">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>OTP</mat-label>
+        <input
+          formControlName="otp"
+          matInput
+          placeholder="Enter OTP"
+        />
+      </mat-form-field>
+    </div>
+    <!-- otp -->
+
+
+
+
+
+
+
+    <br>
+    <div class="d-flex align-items-center justify-content-center">
+      <div mat-dialog-action [align]="'center'">
+        <button mat-raised-button color="primary" (click)="submitOtp()">
+          Add New
+        </button>
+      </div>
+    </div>
+
+  </div>
+</form>
