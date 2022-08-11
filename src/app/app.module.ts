@@ -24,6 +24,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ContactsComponent,
     ContactInfoComponent,
     NavbarComponent,
+    AuthenticationComponent
 
   ],
   imports: [
@@ -54,7 +57,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatSortModule,
     MatDatepickerModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent },
+      { path: '', component: SigninComponent },
       {
         path: 'user',
         component: UserComponent,
@@ -64,6 +67,7 @@ import { NavbarComponent } from './navbar/navbar.component';
       {path:'contactInfo',component:ContactInfoComponent,canActivate:[IsAuthenticateGuard]},
       { path: 'register', component: LoginComponent },
       { path: 'login', component: SigninComponent },
+      { path: 'authentication', component: AuthenticationComponent },
       { path: '**', component: NotFoundComponent },
     ]),
   ],

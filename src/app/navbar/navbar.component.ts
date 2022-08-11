@@ -15,8 +15,8 @@ export class NavbarComponent implements OnInit {
   }
 
   handleLogout(){
-     localStorage.removeItem("accessToken");
-    this.Router.navigate(['/login'])
+    localStorage.removeItem("accessToken");
+    this.Router.navigate(['/login']);
   }
 
 

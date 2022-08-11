@@ -32,6 +32,11 @@ export class SigninComponent implements OnInit {
     });
   }
 
+  toggleRegister(){
+    this.router.navigate(['/register'])
+  }
+
+
   submitForm() {
     console.log('called');
     if (this.signInForm.valid) {
@@ -45,7 +50,7 @@ export class SigninComponent implements OnInit {
           else if(res.status===200){
             console.log(res, 'response');
             localStorage.setItem('accessToken', res.token);
-            this.router.navigate(['/']);
+            this.router.navigate(['/contact']);
           }
           else{
 

@@ -56,7 +56,7 @@
 
 
     <div mat-dialog-action [align]="'center'">
-      <button mat-raised-button color="warn" mat-dialog-close>close</button
+      <button mat-raised-button color="warn" (click)="toogleLogin()" mat-dialog-close>Login</button
       >&nbsp;&nbsp;
       <button mat-raised-button color="primary" (click)="submitForm()">
         Register
