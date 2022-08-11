@@ -46,8 +46,8 @@ export class LoginComponent implements OnInit {
       this.loginApiService.register(this.loginForm.value).subscribe({
         next: (res) => {
           // console.log(res,"response")
-          localStorage.setItem('accessToken', res.token);
-          this.router.navigate(['/contact']);
+          // localStorage.setItem('accessToken', res.token);
+          this.router.navigate(['/login']);
         },
       });
     } else {

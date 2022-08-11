@@ -1,66 +1,70 @@
-<form [formGroup]="loginForm">
-  <div class="card">
-    <p class="text-center text-primary">Register</p>
-        <!-- First Name -->
 
-    <div class="d-flex align-items-center justify-content-center">
-      <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Enter First Name</mat-label>
-        <input
-          formControlName="firstName"
-          matInput
-          placeholder="Enter Your firstName"
-        />
-      </mat-form-field>
-    </div>
-        <!-- First Name end -->
+  <form [formGroup]="loginForm">
 
-        <!-- last name  -->
-    <div class="d-flex align-items-center justify-content-center">
-      <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Enter Last Name</mat-label>
-        <input
-          formControlName="lastName"
-          matInput
-          placeholder="Enter Your lastName"
-        />
-      </mat-form-field>
-    </div>
-        <!-- last name  -->
+    <div class="card">
+      <h1 class="text-center text-primary">Register</h1>
+          <!-- First Name -->
 
-      <!-- email  -->
-    <div class="d-flex align-items-center justify-content-center">
-      <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Enter Email</mat-label>
-        <input
-          formControlName="email"
-          matInput
-          placeholder="Enter Your Email"
-        />
-      </mat-form-field>
-    </div>
-      <!-- email  -->
-
-      <!-- phone  -->
       <div class="d-flex align-items-center justify-content-center">
         <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Enter Phone Number</mat-label>
+          <mat-label>Enter First Name</mat-label>
           <input
-            formControlName="phone"
+            formControlName="firstName"
             matInput
-            placeholder="Enter Your Phone Number"
+            placeholder="Enter Your firstName"
           />
         </mat-form-field>
       </div>
-      <!-- phone  -->
+          <!-- First Name end -->
+
+          <!-- last name  -->
+      <div class="d-flex align-items-center justify-content-center">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Enter Last Name</mat-label>
+          <input
+            formControlName="lastName"
+            matInput
+            placeholder="Enter Your lastName"
+          />
+        </mat-form-field>
+      </div>
+          <!-- last name  -->
+
+        <!-- email  -->
+      <div class="d-flex align-items-center justify-content-center">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Enter Email</mat-label>
+          <input
+            formControlName="email"
+            matInput
+            placeholder="Enter Your Email"
+          />
+        </mat-form-field>
+      </div>
+        <!-- email  -->
+
+        <!-- phone  -->
+        <div class="d-flex align-items-center justify-content-center">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Enter Phone Number</mat-label>
+            <input
+              formControlName="phone"
+              matInput
+              placeholder="Enter Your Phone Number"
+            />
+          </mat-form-field>
+        </div>
+        <!-- phone  -->
 
 
-    <div mat-dialog-action [align]="'center'">
-      <button mat-raised-button color="warn" (click)="toogleLogin()" mat-dialog-close>Login</button
-      >&nbsp;&nbsp;
-      <button mat-raised-button color="primary" (click)="submitForm()">
-        Register
-      </button>
+      <div mat-dialog-action [align]="'center'">
+        <button mat-raised-button color="warn" (click)="toogleLogin()" mat-dialog-close>Login</button
+        >&nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="submitForm()">
+          Register
+        </button>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+
+

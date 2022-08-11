@@ -8,10 +8,10 @@ export class LoginApiService {
   constructor(private http: HttpClient) {}
 
   register(data) {
-    return this.http.post<any>('http://localhost:4000/user/register', data);
+    return this.http.post<any>('https://nameless-dawn-65967.herokuapp.com/user/register', data);
   }
 
   login(data) {
-    return this.http.post<any>(`http://localhost:4000/user/login/`, data);
+    return this.http.post<any>(`https://nameless-dawn-65967.herokuapp.com/user/login/`, data);
   }
 }

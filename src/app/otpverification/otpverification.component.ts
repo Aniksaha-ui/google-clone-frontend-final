@@ -26,9 +26,9 @@ export class OtpverificationComponent implements OnInit {
         this.AuthenticationService.otpVerified(this.otpForm.value).subscribe({
             next:(res)=>{
               if(res.status===200){
-                this.route.navigate(['/login'])
+                this.route.navigate(['/changepassword']);
               } else{
-                alert("OTP not match")
+                alert("OTP not match");
               }
             }
         })

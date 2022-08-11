@@ -26,6 +26,7 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { OtpverificationComponent } from './otpverification/otpverification.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { OtpverificationComponent } from './otpverification/otpverification.comp
     ContactInfoComponent,
     NavbarComponent,
     AuthenticationComponent,
-    OtpverificationComponent
+    OtpverificationComponent,
+    ChangepasswordComponent
 
   ],
   imports: [
@@ -71,6 +73,7 @@ import { OtpverificationComponent } from './otpverification/otpverification.comp
       { path: 'login', component: SigninComponent },
       { path: 'authentication', component: AuthenticationComponent },
       { path: 'otpVarification', component: OtpverificationComponent },
+      { path: 'changepassword', component: ChangepasswordComponent },
       { path: '**', component: NotFoundComponent },
     ]),
   ],

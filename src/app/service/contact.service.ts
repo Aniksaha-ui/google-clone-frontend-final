@@ -9,10 +9,10 @@ export class ContactService {
   constructor(private http:HttpClient) { }
 
   getContact(email){
-    return this.http.get<any>(`http://localhost:4000/user/mycontact?useremail=${email}`)
+    return this.http.get<any>(`https://nameless-dawn-65967.herokuapp.com/user/mycontact?useremail=${email}`)
   }
 
   postContact(data,email,token){
-    return this.http.post<any>(`http://localhost:4000/user/mycontact`,data);
+    return this.http.post<any>(`https://nameless-dawn-65967.herokuapp.com/user/mycontact`,data);
   }
 }
