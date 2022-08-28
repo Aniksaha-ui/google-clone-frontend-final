@@ -1,8 +1,3 @@
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 .d-flex {
   display: flex;
 }
@@ -14,18 +9,20 @@
   justify-content: center;
 }
 
-.card {
-  margin-top: 40px;
-  margin-right: 350px;
-  margin-left: 350px;
-  margin-bottom: 40px;
-
-  padding: 5rem;
-  border: 1px solid blue;
+.card-header {
+  background: rgb(69, 107, 245);
+  margin-right: 550px;
+  margin-left: 550px;
+  padding: 0.6rem;
 }
 
-.text-center {
-  text-align: center;
+.card {
+  background: white;
+  margin-right: 550px;
+  margin-left: 550px;
+  margin-bottom: 40px;
+  padding: 2rem;
+  border: 1px solid blue;
 }
 .text-primary {
   color: rgb(24, 67, 67);

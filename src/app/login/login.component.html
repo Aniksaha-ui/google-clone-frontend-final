@@ -1,70 +1,75 @@
+<form [formGroup]="loginForm" class="mt-5">
+  <h1 class="text-white text-center">Google Contact clone</h1>
 
-  <form [formGroup]="loginForm">
+  <div class="card-header">
+    <h1 class="text-center text-white">Register Your Account</h1>
+  </div>
+  <div class="card">
+    <!-- First Name -->
 
-    <div class="card">
-      <h1 class="text-center text-primary">Register</h1>
-          <!-- First Name -->
-
-      <div class="d-flex align-items-center justify-content-center">
-        <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Enter First Name</mat-label>
-          <input
-            formControlName="firstName"
-            matInput
-            placeholder="Enter Your firstName"
-          />
-        </mat-form-field>
-      </div>
-          <!-- First Name end -->
-
-          <!-- last name  -->
-      <div class="d-flex align-items-center justify-content-center">
-        <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Enter Last Name</mat-label>
-          <input
-            formControlName="lastName"
-            matInput
-            placeholder="Enter Your lastName"
-          />
-        </mat-form-field>
-      </div>
-          <!-- last name  -->
-
-        <!-- email  -->
-      <div class="d-flex align-items-center justify-content-center">
-        <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Enter Email</mat-label>
-          <input
-            formControlName="email"
-            matInput
-            placeholder="Enter Your Email"
-          />
-        </mat-form-field>
-      </div>
-        <!-- email  -->
-
-        <!-- phone  -->
-        <div class="d-flex align-items-center justify-content-center">
-          <mat-form-field class="example-full-width" appearance="outline">
-            <mat-label>Enter Phone Number</mat-label>
-            <input
-              formControlName="phone"
-              matInput
-              placeholder="Enter Your Phone Number"
-            />
-          </mat-form-field>
-        </div>
-        <!-- phone  -->
-
-
-      <div mat-dialog-action [align]="'center'">
-        <button mat-raised-button color="warn" (click)="toogleLogin()" mat-dialog-close>Login</button
-        >&nbsp;&nbsp;
-        <button mat-raised-button color="primary" (click)="submitForm()">
-          Register
-        </button>
-      </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter First Name</mat-label>
+        <input
+          formControlName="firstName"
+          matInput
+          placeholder="Enter Your firstName"
+        />
+      </mat-form-field>
     </div>
-  </form>
+    <!-- First Name end -->
 
+    <!-- last name  -->
+    <div class="d-flex align-items-center justify-content-center">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter Last Name</mat-label>
+        <input
+          formControlName="lastName"
+          matInput
+          placeholder="Enter Your lastName"
+        />
+      </mat-form-field>
+    </div>
+    <!-- last name  -->
 
+    <!-- email  -->
+    <div class="d-flex align-items-center justify-content-center">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter Email</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="Enter Your Email"
+        />
+      </mat-form-field>
+    </div>
+    <!-- email  -->
+
+    <!-- phone  -->
+    <div class="d-flex align-items-center justify-content-center">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter Phone Number</mat-label>
+        <input
+          formControlName="phone"
+          matInput
+          placeholder="Enter Your Phone Number"
+        />
+      </mat-form-field>
+    </div>
+    <!-- phone  -->
+
+    <div mat-dialog-action [align]="'center'">
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="toogleLogin()"
+        mat-dialog-close
+      >
+        Login</button
+      >&nbsp;&nbsp;
+      <button mat-raised-button color="primary" (click)="submitForm()">
+        Register
+      </button>
+    </div>
+  </div>
+</form>

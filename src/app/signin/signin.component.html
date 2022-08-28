@@ -1,6 +1,10 @@
-<form [formGroup]="signInForm">
+<form [formGroup]="signInForm" class="mt-5">
+  <h1 class="text-white text-center">Google Contact clone</h1>
+
+  <div class="card-header">
+    <h1 class="text-center text-white">Login Your Account</h1>
+  </div>
   <div class="card">
-    <p class="text-center text-primary">Register</p>
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Email</mat-label>
@@ -16,7 +20,7 @@
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Password</mat-label>
         <input
-        type="password"
+          type="password"
           formControlName="password"
           matInput
           placeholder="Enter Your Password"
@@ -24,10 +28,16 @@
       </mat-form-field>
     </div>
     <div mat-dialog-action [align]="'center'">
-      <button mat-raised-button color="warn" (click)="toggleRegister()" mat-dialog-close>Register</button
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="toggleRegister()"
+        mat-dialog-close
+      >
+        Register</button
       >&nbsp;&nbsp;
       <button mat-raised-button color="primary" (click)="submitForm()">
-       Login
+        Login
       </button>
     </div>
   </div>

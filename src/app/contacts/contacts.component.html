@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 
-<form [formGroup]="contactForm">
+<form [formGroup]="contactForm" class="mt-5">
   <div class="card">
-    <p class="text-center text-primary">Contact</p>
+    <h1 class="text-center text-primary">Add New</h1>
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter First Name</mat-label>
@@ -43,15 +43,10 @@
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Job Title</mat-label>
-        <input
-          formControlName="job"
-          matInput
-          placeholder="Enter Job Title"
-        />
+        <input formControlName="job" matInput placeholder="Enter Job Title" />
       </mat-form-field>
     </div>
     <!-- job title end -->
-
 
     <!-- email  -->
 
@@ -84,15 +79,11 @@
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Note</mat-label>
-        <input
-          formControlName="note"
-          matInput
-          placeholder="Enter Your Note"
-        />
+        <input formControlName="note" matInput placeholder="Enter Your Note" />
       </mat-form-field>
     </div>
     <!-- notes  -->
-    <br>
+    <br />
     <div class="d-flex align-items-center justify-content-center">
       <div mat-dialog-action [align]="'center'">
         <button mat-raised-button color="primary" (click)="submitContact()">
@@ -100,6 +91,5 @@
         </button>
       </div>
     </div>
-
   </div>
 </form>

@@ -2,18 +2,24 @@ table {
   width: 100%;
 }
 
+.bg-white {
+  background-color: white;
+}
+
+.p-3 {
+  padding: 10px 10px;
+}
+
 .mat-form-field {
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
 }
 
-td, th {
+td,
+th {
   width: 12%;
 }
 
 .container {
   margin: 20px;
 }
-
-
-
