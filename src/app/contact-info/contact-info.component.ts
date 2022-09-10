@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ContactService } from '../service/contact.service';
 import { HttpClient } from '@angular/common/http';
 import { ApiService } from '../service/api.service';
@@ -8,13 +8,20 @@ import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-contact-info',
   templateUrl: './contact-info.component.html',
-  styleUrls: ['./contact-info.component.css']
+  styleUrls: ['./contact-info.component.css'],
 })
 export class ContactInfoComponent implements OnInit {
+  constructor(private ContactService: ContactService) {}
 
-  constructor(private ContactService:ContactService) { }
-
-  displayedColumns: string[] = ['firstName', 'lastName', 'email', 'phone','company','job'];
+  displayedColumns: string[] = [
+    'firstName',
+    'lastName',
+    'email',
+    'phone',
+    'company',
+    'job',
+  ];
+  targetValue: String = 'anik';
   columnsToDisplay: string[] = this.displayedColumns.slice();
 
   dataSource: MatTableDataSource<any>;
@@ -23,12 +30,11 @@ export class ContactInfoComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   contact: any = [];
   ngOnInit(): void {
-
     this.getContact();
   }
 
-  getLoginEmail(){
-    const token = localStorage.getItem("accessToken");
+  getLoginEmail() {
+    const token = localStorage.getItem('accessToken');
     console.log(token);
     let jwtData = token.split('.')[1];
     let decodedJwtJsonData = window.atob(jwtData);
@@ -38,17 +44,24 @@ export class ContactInfoComponent implements OnInit {
   }
 
   getContact() {
-    let email = this.getLoginEmail()
+    let email = this.getLoginEmail();
     this.ContactService.getContact(email).subscribe({
       next: (res) => {
+        // console.log(res);
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
         console.log(res);
+        const firstName = res.forEach((element) => {
+          if (
+            element.firstName.toLowerCase() === this.targetValue.toLowerCase()
+          ) {
+            console.log('Number Already Exist');
+          }
+        });
       },
     });
   }
-
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -58,5 +71,4 @@ export class ContactInfoComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
 }

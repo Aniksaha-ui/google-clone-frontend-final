@@ -1,8 +1,8 @@
-
-
-<form [formGroup]="otpForm">
+<form [formGroup]="otpForm" class="mt-5">
+  <div class="card-header">
+    <h1 class="text-center text-white">OTP Verification</h1>
+  </div>
   <div class="card">
-    <p class="text-center text-primary">OTP Varification</p>
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Enter Email Address</mat-label>
@@ -14,34 +14,22 @@
       </mat-form-field>
     </div>
 
-
     <!-- otp  -->
     <div class="d-flex align-items-center justify-content-center">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>OTP</mat-label>
-        <input
-          formControlName="otp"
-          matInput
-          placeholder="Enter OTP"
-        />
+        <input formControlName="otp" matInput placeholder="Enter OTP" />
       </mat-form-field>
     </div>
     <!-- otp -->
 
-
-
-
-
-
-
-    <br>
+    <br />
     <div class="d-flex align-items-center justify-content-center">
       <div mat-dialog-action [align]="'center'">
         <button mat-raised-button color="primary" (click)="submitOtp()">
-              Verify
+          Verify
         </button>
       </div>
     </div>
-
   </div>
 </form>
